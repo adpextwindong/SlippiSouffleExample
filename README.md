@@ -4,9 +4,5 @@
 
 ```
 nix-shell
-cargo run
-
-# dump the two fact batches into their own files
-
-souffle example.dl
+cargo run && souffle example.dl && cat UpSmash.csv
 ```

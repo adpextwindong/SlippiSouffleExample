@@ -6,6 +6,7 @@
 
 .decl Trans(player :number, s1 : number, s2 :number, ts :number)
 
+//Player Action State transition
 Trans(player, s1, s2, ts):-
   prestate(player, ts, s1),
   poststate(player, ts, s2).
@@ -17,5 +18,7 @@ Trans(player, s1, s2, ts):-
 UpSmash(player, ts) :-
   Trans(player, s1, 63, ts),
   s1 != 63.
+
+//https://github.com/hohav/peppi/blob/main/peppi/src/model/enums/action_state.rs#L174
 
 .output UpSmash
